@@ -1,37 +1,23 @@
 
-public class CompteBancaire {
- public String Property;
- private double Solde;
 
-    public String getProperty() {
-        return Property;
-    }
+public class CompteBancaire 
+{
+    public String titulaire;
+    public double solde; 
 
-    public void setProperty(String property){
-        this.Property = property;
-    }
-
-    public double getSolde()
+    public CompteBancaire(String titulaire, double solde)
     {
-        return Solde;
+        this.titulaire = titulaire;
+        this.solde = solde;
     }
-
-    public double DeposerSolde(double montant)
+ 
+    public static void main(String[] args)
     {
-        if(montant > 0)
-        {
-            Solde += montant;
-        }
-        return Solde;
+        CompteBancaire compteBancaire1 = new CompteBancaire("paul",50000);
+        CompteBancaire compteBancaire2 = new CompteBancaire("Marie",120000.0);
+        System.out.println(compteBancaire1.titulaire);
+        System.out.println(compteBancaire1.solde);
+        System.out.println(compteBancaire2.titulaire);
+        System.out.println(compteBancaire2.solde);
     }
-
-    public double RefuserSolde(double montant)
-    {
-       if(montant > 0 && montant <= Solde)
-       {
-           Solde -= montant;
-       }
-         return Solde;
-    }
-
 }
