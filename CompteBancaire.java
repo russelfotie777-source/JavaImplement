@@ -2,22 +2,45 @@
 
 public class CompteBancaire 
 {
-    public String titulaire;
-    public double solde; 
+    private String titulaire;
+    private double solde; 
 
     public CompteBancaire(String titulaire, double solde)
     {
         this.titulaire = titulaire;
         this.solde = solde;
     }
- 
-    public static void main(String[] args)
+    public String getTitulaire()
     {
-        CompteBancaire compteBancaire1 = new CompteBancaire("paul",50000);
-        CompteBancaire compteBancaire2 = new CompteBancaire("Marie",120000.0);
-        System.out.println(compteBancaire1.titulaire);
-        System.out.println(compteBancaire1.solde);
-        System.out.println(compteBancaire2.titulaire);
-        System.out.println(compteBancaire2.solde);
+        return this.titulaire;
     }
+    public void setTitulaire(String nomTitulaire)
+    {
+        this.titulaire = nomTitulaire;
+    }
+
+    public double getSolde()
+    {
+        return this.solde;
+    }
+
+    public void deposer(double montant)
+    {
+        if (montant > 0) {
+            this.solde += montant;
+        }else{
+            System.out.println("Montant invalide");
+        }
+    }
+    //modific
+    public void retirer(double montant)
+    {
+        if(montant > 0 && montant <= this.solde)
+        {
+            this.solde -= montant;
+        }else{
+            System.out.println("Solde Insuffisant");
+        }
+    }
+ 
 }
