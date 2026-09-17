@@ -14,7 +14,10 @@ public abstract class Brox {
         {
             return this.nom;
         }
- 
+        public String getPelephone()
+        {
+            return this.telephone;
+        }
 
         public void setpassword(String password)
         {
