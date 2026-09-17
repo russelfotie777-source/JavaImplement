@@ -18,6 +18,10 @@ public abstract class Brox {
         {
             return this.telephone;
         }
+        public String getPassword()
+        {
+            return this.password;
+        }
 
         public void setpassword(String password)
         {
