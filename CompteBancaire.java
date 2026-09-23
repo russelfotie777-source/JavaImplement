@@ -2,11 +2,11 @@
 
 public class CompteBancaire 
 {
-    private String titulaire;
+    private Client titulaire;
     private double solde; 
     private static int nombreDeComptes = 0;
 
-    public CompteBancaire(String titulaire, double solde)
+    public CompteBancaire(Client titulaire, double solde)
     {
         this.titulaire = titulaire;
         if(solde >= 0)
@@ -27,17 +27,8 @@ public class CompteBancaire
     }
     public void afficherPropriétaire()
     {
-        System.out.println("Le titulaire du compte est : "+this.titulaire);
+        System.out.println("Le titulaire du compte est : "+this.getTitulaire().getNom());
     }
-    public String getTitulaire()
-    {
-        return this.titulaire;
-    }
-    public void setTitulaire(String nomTitulaire)
-    {
-        this.titulaire = nomTitulaire;
-    }
-
     public double getSolde()
     {
         return this.solde;
@@ -60,6 +51,10 @@ public class CompteBancaire
             return true;
         }
         return false;
+    }
+    public Client getTitulaire()
+    {
+        return this.titulaire;
     }
  
 }
