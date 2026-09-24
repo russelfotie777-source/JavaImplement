@@ -17,14 +17,7 @@
         System.out.println("Le taux d'intérêt du compteEpargne est : "+compteEpargne1.getTauxinteret());
         compteEpargne1.deposer(20000.0);
         System.out.println("Le Solde actuel du compte Epargne est de :"+compteEpargne1.getSolde());
-        //depot d'argent sur le compteBancaire1
-        boolean resultatDepot = compteBancaire1.deposer(100000.0);
-          if(resultatDepot)
-          {
-             System.out.println("Depot effectué avec Succes");
-          }else{
-             System.out.println("Depot échoué");
-          }
+      
         //retait d'argent sur le compteBancaire1
         boolean resultatRetrait1 = compteBancaire1.retirer(20000.0);
         boolean resultatRetrait2 = compteBancaire1.retirer(200000.0);
@@ -33,8 +26,6 @@
         CompteBancaire.afficherNomBanque();
         compteBancaire1.afficherPropriétaire();
         paul.afficherClient();
-        System.out.println(compteBancaire1.getTitulaire());
-        System.out.println(compteBancaire1.getSolde());
         if(resultatRetrait1)
         {
             System.out.println("Retrait effectué avec Succes");
