@@ -1,3 +1,4 @@
+public class CompteCourant extends CompteBancaire {
 public Comptecourant(Client titulaire, double solde) {
         super(titulaire, solde);
     }
@@ -16,3 +17,5 @@ public Comptecourant(Client titulaire, double solde) {
         return true;
     }
 }
+
+
