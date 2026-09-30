@@ -1,5 +1,6 @@
 public class CompteCourant extends CompteBancaire {
-public Comptecourant(Client titulaire, double solde) {
+    private static final double LIMITE_DECOUVERT = -50000;
+public CompteCourant(Client titulaire, double solde) {
         super(titulaire, solde);
     }
 
