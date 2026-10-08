@@ -1,7 +1,7 @@
 public class CompteCourant extends CompteBancaire {
     private static final double LIMITE_DECOUVERT = -50000;
     public  CompteCourant(Client titulaire) {
-        super(titulaire);
+        super(titulaire)
     }
 public CompteCourant(Client titulaire, double solde) {
         super(titulaire, solde);
@@ -19,6 +19,12 @@ public CompteCourant(Client titulaire, double solde) {
         }
         setSolde(getSolde() - montant);
         return true;
+    } 
+    public boolean depot(double montant)
+    {
+        if (getSolde()=montant) {
+            getSolde() = this.montant - montant;
+        }
     }
 }
 
